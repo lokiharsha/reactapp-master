@@ -27,7 +27,7 @@ jobs:
         with:
           context:   
           push: true
-          tags: your-username/your-app-name:${{ github.sha }}
+          tags: pathidocker/your-app-name:${{ github.sha }}
           dockerfile: Dockerfile
 
 
