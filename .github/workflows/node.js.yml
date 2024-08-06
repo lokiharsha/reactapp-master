@@ -22,12 +22,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: delete an existing image 
+        run: sudo docker rmi pathidocker/your-app-name:1 | true
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context:   
           push: true
-          tags: pathidocker/your-app-name:${{ github.sha }}
+          tags: pathidocker/your-app-name:1
           dockerfile: Dockerfile
 
 
