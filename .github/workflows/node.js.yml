@@ -26,7 +26,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context:   
- .
           push: true
           tags: your-username/your-app-name:${{ github.sha }}
           dockerfile: Dockerfile
